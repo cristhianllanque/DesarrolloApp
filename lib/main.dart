@@ -1,3 +1,4 @@
+import 'package:calc_upeu/comp/CustomAppBarX.dart';
 import 'package:flutter/material.dart';
 import 'package:calc_upeu/comp/CustomAppBar.dart';
 import 'package:calc_upeu/theme/AppTheme.dart';
@@ -100,9 +101,10 @@ class CalcAppState extends State<CalcApp> {
       debugShowCheckedModeBanner: false,
       title: 'Calculator',
       themeMode: AppTheme.useLightMode ? ThemeMode.light : ThemeMode.dark,
-      theme: AppTheme.themeData,
+      theme: AppTheme.themeDataLight,//Fin Agregado
+      darkTheme: AppTheme.themeDataDark,
       home: Scaffold(
-        appBar: CustomAppBar(accionx: accion),
+        appBar: CustomAppBarX(accionx: accion),
         body: SingleChildScrollView(
           padding: EdgeInsets.all(20),
           child: Column(
